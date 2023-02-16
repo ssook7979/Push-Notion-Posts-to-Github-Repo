@@ -1,0 +1,8 @@
+{
+  "name": "notion-git-push",
+  "packageManager": "yarn@3.4.1",
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "typescript": "^4.9.5"
+  }
+}
