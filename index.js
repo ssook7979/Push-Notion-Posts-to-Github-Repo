@@ -44,4 +44,7 @@ getDatabaseId().then(async (database_id) => {
     page_size: 50,
   });
   */
+  // TODO: using github API find repository with name equals to [username].github.io
+  // TODO: create git repository on local directory
+  // TODO: if files exist, push them to a designated remote repository
 });
