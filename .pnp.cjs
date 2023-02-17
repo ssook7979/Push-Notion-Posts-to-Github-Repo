@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@notionhq/client", "npm:2.2.3"],\
             ["@types/node", "npm:18.13.0"],\
             ["dotenv", "npm:16.0.3"],\
+            ["notion-to-md", "npm:2.5.5"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
           "linkType": "SOFT"\
@@ -116,6 +117,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["markdown-table", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/markdown-table-npm-2.0.0-a9c10c8e83-9bb634a930.zip/node_modules/markdown-table/",\
+          "packageDependencies": [\
+            ["markdown-table", "npm:2.0.0"],\
+            ["repeat-string", "npm:1.6.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["mime-db", [\
         ["npm:1.52.0", {\
           "packageLocation": "./.yarn/cache/mime-db-npm-1.52.0-b5371d6fd2-0d99a03585.zip/node_modules/mime-db/",\
@@ -166,9 +177,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@notionhq/client", "npm:2.2.3"],\
             ["@types/node", "npm:18.13.0"],\
             ["dotenv", "npm:16.0.3"],\
+            ["notion-to-md", "npm:2.5.5"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
           "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["notion-to-md", [\
+        ["npm:2.5.5", {\
+          "packageLocation": "./.yarn/cache/notion-to-md-npm-2.5.5-2cc26d4d81-6ad0f104a8.zip/node_modules/notion-to-md/",\
+          "packageDependencies": [\
+            ["notion-to-md", "npm:2.5.5"],\
+            ["markdown-table", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["repeat-string", [\
+        ["npm:1.6.1", {\
+          "packageLocation": "./.yarn/cache/repeat-string-npm-1.6.1-bc8e388655-1b809fc6db.zip/node_modules/repeat-string/",\
+          "packageDependencies": [\
+            ["repeat-string", "npm:1.6.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["tr46", [\

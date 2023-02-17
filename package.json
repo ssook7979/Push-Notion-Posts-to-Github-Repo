@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@notionhq/client": "^2.2.3",
-        "dotenv": "^16.0.3"
+        "dotenv": "^16.0.3",
+        "notion-to-md": "^2.5.5"
     }
 }

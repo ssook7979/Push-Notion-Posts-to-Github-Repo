@@ -73,6 +73,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-table@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "markdown-table@npm:2.0.0"
+  dependencies:
+    repeat-string: ^1.0.0
+  checksum: 9bb634a9300016cbb41216c1eab44c74b6b7083ac07872e296f900a29449cf0e260ece03fa10c3e9784ab94c61664d1d147da0315f95e1336e2bdcc025615c90
+  languageName: node
+  linkType: hard
+
 "mime-db@npm:1.52.0":
   version: 1.52.0
   resolution: "mime-db@npm:1.52.0"
@@ -110,9 +119,26 @@ __metadata:
     "@notionhq/client": ^2.2.3
     "@types/node": ^18.13.0
     dotenv: ^16.0.3
+    notion-to-md: ^2.5.5
     typescript: ^4.9.5
   languageName: unknown
   linkType: soft
+
+"notion-to-md@npm:^2.5.5":
+  version: 2.5.5
+  resolution: "notion-to-md@npm:2.5.5"
+  dependencies:
+    markdown-table: ^2.0.0
+  checksum: 6ad0f104a8b3298f5b28643370565f8b7c9901c1b4b56050ea6dbd79a8c200275ba4487137127f189e68964f3eba811c16a632c389fbc0a12e18a2c4cf487cd4
+  languageName: node
+  linkType: hard
+
+"repeat-string@npm:^1.0.0":
+  version: 1.6.1
+  resolution: "repeat-string@npm:1.6.1"
+  checksum: 1b809fc6db97decdc68f5b12c4d1a671c8e3f65ec4a40c238bc5200e44e85bcc52a54f78268ab9c29fcf5fe4f1343e805420056d1f30fa9a9ee4c2d93e3cc6c0
+  languageName: node
+  linkType: hard
 
 "tr46@npm:~0.0.3":
   version: 0.0.3
