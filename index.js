@@ -4,7 +4,7 @@ const { Octokit } = require("octokit");
 require("dotenv").config();
 
 const notion = new Client({
-  auth: process.env.TOKEN,
+  auth: process.env.NOTION_ACCESS_TOKEN,
 });
 
 const getDatabaseId = async () => {
