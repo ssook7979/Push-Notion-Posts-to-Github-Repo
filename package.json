@@ -12,6 +12,7 @@
         "@notionhq/client": "^2.2.3",
         "dotenv": "^16.0.3",
         "notion-to-md": "^2.5.5",
+        "octokit": "^2.0.14",
         "simple-git": "^3.16.1"
     }
 }

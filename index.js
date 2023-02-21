@@ -1,5 +1,6 @@
 const { Client } = require("@notionhq/client");
 const { NotionToMarkdown } = require("notion-to-md");
+const { Octokit } = require("octokit");
 require("dotenv").config();
 
 const notion = new Client({
@@ -44,7 +45,15 @@ getDatabaseId().then(async (database_id) => {
     page_size: 50,
   });
   */
+  // TODO: use personal access token for prototype, will be replaced with OAuth2 authentication
+  // https://docs.github.com/en/rest/guides/scripting-with-the-rest-api-and-javascript?apiVersion=2022-11-28#authenticating-with-a-personal-access-token
+  // use Octokit for Github API request
+  const octokit = new Octokit({
+    auth: process.env.GITHUB_ACCESS_TOKEN,
+  });
+
   // TODO: using github API find repository with name equals to [username].github.io
+
   // TODO: create git repository on local directory
   // TODO: if files exist, push them to a designated remote repository
 });
