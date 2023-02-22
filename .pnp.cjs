@@ -29,6 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@notionhq/client", "npm:2.2.3"],\
+            ["@octokit/request-error", "npm:3.0.3"],\
             ["@types/node", "npm:18.13.0"],\
             ["dotenv", "npm:16.0.3"],\
             ["notion-to-md", "npm:2.5.5"],\
@@ -782,6 +783,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["notion-git-push", "workspace:."],\
             ["@notionhq/client", "npm:2.2.3"],\
+            ["@octokit/request-error", "npm:3.0.3"],\
             ["@types/node", "npm:18.13.0"],\
             ["dotenv", "npm:16.0.3"],\
             ["notion-to-md", "npm:2.5.5"],\

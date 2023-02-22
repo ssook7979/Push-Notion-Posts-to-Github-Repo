@@ -601,6 +601,7 @@ __metadata:
   resolution: "notion-git-push@workspace:."
   dependencies:
     "@notionhq/client": ^2.2.3
+    "@octokit/request-error": ^3.0.3
     "@types/node": ^18.13.0
     dotenv: ^16.0.3
     notion-to-md: ^2.5.5
