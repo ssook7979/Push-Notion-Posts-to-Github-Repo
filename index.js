@@ -52,8 +52,24 @@ getDatabaseId().then(async (database_id) => {
     auth: process.env.GITHUB_ACCESS_TOKEN,
   });
 
-  // TODO: using github API find repository with name equals to [username].github.io
+  // TODO: get username
+  octokit
+    .request("GET /user", {
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    })
+    .then((res) => console.log(`Logged in user is ${res.data.login}`));
 
+  // TODO: using github API find repository with name equals to [username].github.io
+  // https://docs.github.com/ko/rest/search?apiVersion=2022-11-28#search-repositories
+  octokit
+    .request("GET /repos/ssook7979/ssook7979.github.io", {
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    })
+    .then((res) => console.log(`Blog repository id is ${res.data.id}`));
   // TODO: create git repository on local directory
   // TODO: if files exist, push them to a designated remote repository
 });
