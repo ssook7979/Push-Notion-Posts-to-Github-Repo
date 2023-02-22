@@ -60,7 +60,8 @@ getDatabaseId().then(async (database_id) => {
       },
     })
     .then((res) => console.log(`Logged in user is ${res.data.login}`));
-
+  // TODO: let user store designated github repository or search for github blog repo or ... more options..
+  // TODO: store user settings(which repo to be updated etc..)
   // TODO: using github API find repository with name equals to [username].github.io
   // https://docs.github.com/ko/rest/search?apiVersion=2022-11-28#search-repositories
   octokit
