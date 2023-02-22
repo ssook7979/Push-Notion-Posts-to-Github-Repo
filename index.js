@@ -73,4 +73,6 @@ getDatabaseId().then(async (database_id) => {
     .then((res) => console.log(`Blog repository id is ${res.data.id}`));
   // TODO: create git repository on local directory
   // TODO: if files exist, push them to a designated remote repository
+
+  // TODO: auto mode - cron job, manual mode - manually search updates and push to repository
 });
