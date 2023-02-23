@@ -30,7 +30,6 @@ getDatabaseId().then(async (database_id) => {
   const n2m = new NotionToMarkdown({ notionClient: notion });
   const mdblocks = await n2m.pageToMarkdown(pageId);
   const mdString = n2m.toMarkdownString(mdblocks);
-  console.log(mdString);
 
   /* writing to file
   fs.writeFile("test.md", mdString, (err) => {
@@ -53,24 +52,17 @@ getDatabaseId().then(async (database_id) => {
   });
 
   // TODO: get username
-  octokit
-    .request("GET /user", {
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    })
-    .then((res) => console.log(`Logged in user is ${res.data.login}`));
+  const username = await octokit
+    .request("GET /user")
+    .then((res) => res.data.login);
   // TODO: let user store designated github repository or search for github blog repo or ... more options..
   // TODO: store user settings(which repo to be updated etc..)
   // TODO: using github API find repository with name equals to [username].github.io
   // https://docs.github.com/ko/rest/search?apiVersion=2022-11-28#search-repositories
-  octokit
-    .request("GET /repos/ssook7979/ssook7979.github.io", {
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    })
-    .then((res) => console.log(`Blog repository id is ${res.data.id}`));
+  const repoName = `${username}.github.io`;
+  const repoId = await octokit
+    .request(`GET /repos/${username}/${repoName}`)
+    .then((res) => res.data.id);
   // TODO: create git repository on local directory
   // TODO: if files exist, push them to a designated remote repository
   octokit.request(`PUT /repos/${username}/${repoName}/${pageId}`);
