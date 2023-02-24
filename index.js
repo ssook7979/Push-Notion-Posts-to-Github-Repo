@@ -29,7 +29,7 @@ getDatabaseId().then(async (database_id) => {
   const pageId = pages.results[0].id;
   const n2m = new NotionToMarkdown({ notionClient: notion });
   const mdblocks = await n2m.pageToMarkdown(pageId);
-  const mdString = n2m.toMarkdownString(mdblocks);
+  const mdBase64 = btoa(n2m.toMarkdownString(mdblocks));
 
   /* writing to file
   fs.writeFile("test.md", mdString, (err) => {
@@ -65,6 +65,15 @@ getDatabaseId().then(async (database_id) => {
     .then((res) => res.data.id);
   // TODO: create git repository on local directory
   // TODO: if files exist, push them to a designated remote repository
-  octokit.request(`PUT /repos/${username}/${repoName}/${pageId}`);
+  // TODO: updating existing file
+  // getting SHA blob: https://stackoverflow.com/questions/20207594/how-to-find-a-github-file-s-sha-blob
+  const sha = await octokit
+    .request(`GET /repos/${username}/${repoName}/${pageId}`)
+    .then((res) => res.data.sha);
+  octokit.request(`PUT /repos/${username}/${repoName}/${pageId}`, {
+    message: "", // from notion property?
+    content: mdBase64,
+    sha,
+  });
   // TODO: auto mode - cron job, manual mode - manually search updates and push to repository
 });
