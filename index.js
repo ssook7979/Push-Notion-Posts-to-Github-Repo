@@ -76,5 +76,7 @@ getDatabaseId().then(async (database_id) => {
     sha,
   });
   // TODO: auto mode - cron job, manual mode - manually search updates and push to repository
-  // TODO: ideas on this projects concept: develope as a chrome extension?
+  // TODO: ideas on this projects
+  // - develope as a chrome extension?
+  // - webhook?
 });
