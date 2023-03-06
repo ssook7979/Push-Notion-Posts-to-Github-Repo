@@ -79,4 +79,5 @@ getDatabaseId().then(async (database_id) => {
   // TODO: ideas on this projects
   // - develope as a chrome extension?
   // - webhook?
+  // - zapier webhook action https://help.zapier.com/hc/en-us/articles/8496326446989
 });
